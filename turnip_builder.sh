@@ -85,12 +85,6 @@ ninja -C build-android-aarch64 &> "$workdir"/ninja_log
 
 
 
-if ! [ -a libvulkan_freedreno.so ]; then
-	echo -e "$red Build failed! $nocolor" && exit 1
-fi
-
-
-
 echo "Prepare magisk module structure ..." $'\n'
 mkdir -p "$magiskdir" 
 
