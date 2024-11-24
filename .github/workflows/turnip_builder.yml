@@ -1,8 +1,9 @@
 name: Build "turnip"
 
 on:
-  workflow_dispatch:
   push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   start_building_turnip:
