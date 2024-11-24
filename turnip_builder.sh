@@ -85,12 +85,6 @@ ninja -C build-android-aarch64 &> "$workdir"/ninja_log
 
 
 
-echo "Using patchelf to match soname ..."  $'\n'
-cp "$workdir"/mesa-main/build-android-aarch64/src/freedreno/vulkan/libvulkan_freedreno.so "$workdir"
-cd "$workdir"
-
-
-
 if ! [ -a libvulkan_freedreno.so ]; then
 	echo -e "$red Build failed! $nocolor" && exit 1
 fi
